@@ -1,10 +1,5 @@
 @use "./sass/abstracts/" as *;
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+@use "./sass/styles/resets.scss" as *;
 
 html {
     scroll-behavior: smooth;
@@ -34,7 +29,11 @@ html {
   }
 
   .nav-logo {
-    display: none;
+    display: flex;
+  }
+  
+  .nav-logo img {
+    width: 150px;
   }
 
   .backdrop-transitioning {
@@ -44,11 +43,11 @@ html {
 
   .navlinks-container {
     position: absolute;  
-    background: linear-gradient(to bottom, rgb(37, 44, 126), rgb(54, 54, 54));
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(209, 208, 218));
     font-size: 1.3rem;
     width: 90%;
     height: 90%;
-    color: $offwhite;
+    color: $text;
     z-index: -10;
   }
 
@@ -61,12 +60,12 @@ html {
   }
 
   .yellow {
-    color: $bluedark;
+    color: $text;
   }
 
   .fullyellow {
-    color: $bluedark;
-    border: 2px solid $bluedark;
+    color: $text;
+    border: 2px solid $text;
     padding: 2px 5px; 
   }
 
@@ -79,7 +78,7 @@ html {
   }
 
   .nav, li {
-    margin-top: 20px;
+    margin-top: 0px;
   }
 
   .nav-transitioning {
@@ -110,10 +109,11 @@ html {
     top: calc(5vh + 25px);
     right: calc(5vw + 5%);
     font-size: 30px;
+    color: $text;
   }
 
   a {
-    color: $offwhite;
+    color: $text;
     transition: box-shadow 0.3s;
   }
 
@@ -154,14 +154,14 @@ html {
   }
 
   .logo {
-    width: 50%;
+    width: 10%;
     max-width: 150px;
     margin: auto
   }
   
   .logo img {
-    display: block;
-    width: 50%;
+    display: none;
+    width: 10%;
   }
 
   /* Start of media queries */
@@ -199,12 +199,15 @@ html {
     font-size: 1.5rem;
     height: 100%;
   }
+
   .nav, li {
     margin-right: 70px;
   }
+
   .nav-transitioning {
     transform: none;
   }
+
   .hidden {
     position: static;
     display: flex;
@@ -213,6 +216,7 @@ html {
   #menu-toggle, #menu-close {
     display: none;
   }
+
   .navlinks-container {
     justify-content: flex-end;
     background-color: transparent;
