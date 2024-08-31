@@ -1,16 +1,26 @@
+@use "./sass/abstracts/" as *;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
 html {
     scroll-behavior: smooth;
   }
+
   body {
     background-color: transparent;
     font-size: 16px;
     margin: 0;
     padding: 0;
   }
+
   nav, .navlinks-container {
     transition: 0.5s;
   }
+
   nav {
     position: fixed;
     top: 0;
@@ -22,13 +32,16 @@ html {
     height: 100vh;
     z-index: 99;
   }
+
   .nav-logo {
     display: none;
   }
+
   .backdrop-transitioning {
     backdrop-filter: none;
     z-index: -10;
   }
+
   .navlinks-container {
     position: absolute;  
     background: linear-gradient(to bottom, rgb(37, 44, 126), rgb(54, 54, 54));
@@ -38,6 +51,7 @@ html {
     color: $offwhite;
     z-index: -10;
   }
+
   .navlinks {
     display: flex;
     flex-direction: column;
@@ -45,14 +59,17 @@ html {
     align-items: center;
     height: 75%;
   }
+
   .yellow {
-    color: $yellow;
+    color: $bluedark;
   }
+
   .fullyellow {
-    color: $yellow;
-    border: 2px solid $yellow;
+    color: $bluedark;
+    border: 2px solid $bluedark;
     padding: 2px 5px; 
   }
+
   .number {
     display: absolute;
     flex-direction: column;
@@ -60,22 +77,27 @@ html {
     align-items: center;
     text-align: center;
   }
+
   .nav, li {
     margin-top: 20px;
   }
+
   .nav-transitioning {
     transform: translateY(-100vh);
   }
+
   .hidden {
     display: none;
     position: absolute;
   }
-  .menu-toggle, .menu-close {
+
+  #menu-toggle, #menu-close {
     position: absolute;
     color: $offwhite;
     z-index: 20;
   }
-  .menu-toggle {
+
+  #menu-toggle {
     position: fixed;
     top: 30px;
     right: 5%;
@@ -83,15 +105,18 @@ html {
     padding: 10px;
     background-color: rgba(16, 16, 70, 0.425);
   }
-  .menu-close {
+
+  #menu-close {
     top: calc(5vh + 25px);
     right: calc(5vw + 5%);
     font-size: 30px;
   }
+
   a {
     color: $offwhite;
     transition: box-shadow 0.3s;
   }
+
   header {
     position: absolute;
     top: 0;
@@ -100,8 +125,9 @@ html {
     align-items: center;
     z-index: 10;
   }
+
   .background {
-    background-image: linear-gradient(to bottom, rgba(0, .6,.6, .9), rgba(0,.2,.2,.5)), url("./public/techo1.jpg");
+    background-image: linear-gradient(to bottom, rgba(0, .6,.6, .9), rgba(0,.2,.2,.5)), url("./techo1.jpg");
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
@@ -120,8 +146,103 @@ html {
             font-size: 1.5rem;
         }
       }
+
   .flex-container {
     display: flex;
     flex-direction: column;
     margin: 0 40px;
   }
+
+  .logo {
+    width: 50%;
+    max-width: 150px;
+    margin: auto
+  }
+  
+  .logo img {
+    display: block;
+    width: 50%;
+  }
+
+  /* Start of media queries */
+@media only screen and (width >= 1024px) {
+  h1 {
+    padding: 35px 0;
+  }
+  h1 {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    font-size: 50px;
+    border-bottom: 5px solid #E7DD11;
+    width: 800px; 
+    margin: auto;
+    padding-bottom: 40px; 
+    margin-bottom: 10px;
+  }
+
+  nav, .backdrop-transitioning {
+    justify-content: flex-end;
+    background-color: white;
+    backdrop-filter: none;
+    width: 100%;
+    height: 150px;
+  }
+
+  header {
+    display: none;
+  }
+  
+  .navlinks{
+    justify-content: space-evenly;
+    flex-direction: row;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    height: 100%;
+  }
+  .nav, li {
+    margin-right: 70px;
+  }
+  .nav-transitioning {
+    transform: none;
+  }
+  .hidden {
+    position: static;
+    display: flex;
+  }
+  
+  #menu-toggle, #menu-close {
+    display: none;
+  }
+  .navlinks-container {
+    justify-content: flex-end;
+    background-color: transparent;
+  }
+
+  .logo {
+    height: 10px;
+    aspect-ratio: 1;
+    margin-left: 30px;
+    display: flex;
+  }
+
+  .nav-logo {
+    margin-top: 0;
+    margin-right: auto;
+  }
+
+  /*
+  .whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  .whatsapp-btn {
+    width: 60px;
+    height: 150px;
+    border-radius: 50%;
+    font-size: 70px;
+  }
+  */
+}
+
+
