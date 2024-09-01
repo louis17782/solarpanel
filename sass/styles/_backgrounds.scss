@@ -1,13 +1,26 @@
 @use "/sass/abstracts/" as *;
 
 .content-background {
-    background-image: linear-gradient(to bottom, rgba(0, .6,.6, 90%), rgba(0,.2,.2,50%)), url("/Agricultura.jpg");
+    background-image: linear-gradient(to bottom, rgba(0, .6,.6, 99%), rgba(0,.2,.2,60%)), url("/Agricultura.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    width: 100%;
+    height: 550px;
+    text-align: center;
 
     p {
+        padding-top: 70px;
         color: $offwhite;
+        font-family: $font-text;
+        font-size: 1.2;
+        margin: 20px;
+    }
+    h6 {
+        font-family: $font-title;
+        color: $offwhite;
+        font-size: 2.6em;
+        margin: 20px;
     }
 }
 
