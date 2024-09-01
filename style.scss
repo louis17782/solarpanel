@@ -196,7 +196,50 @@ html {
     border-radius: 15px;
   }
 
- 
+  .content-residencia, .content-agricultura {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h6 {
+      color: $text;
+      font-size: 2.2em;
+      margin: 20px;
+      font-family: $font-title;
+    }
+    P {
+      color: $text;
+      font-family: $font-text;
+      font-size: 1.5em;
+    }
+  }
+
+  .section-download {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    p {
+      color: $text;
+      font-family: $font-title;
+      font-size: 1.9em;
+    }
+    a {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid $offwhite;
+  border-radius: 5px;
+  background-color: $bluedark; 
+  color: $whitepure;
+  cursor: pointer;
+    }
+    a:hover {
+      background-color: $text;
+    }
+ }
 
   /* Start of media queries */
 @media only screen and (width >= 1024px) {
