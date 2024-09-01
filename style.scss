@@ -1,5 +1,6 @@
 @use "./sass/abstracts/" as *;
 @use "./sass/styles/resets.scss" as *;
+@use "./sass/styles/backgrounds" as*;
 
 html {
     scroll-behavior: smooth;
@@ -74,10 +75,6 @@ html {
     text-align: center;
   }
 
-  .nav, li {
-    margin-top: 0px;
-  }
-
   .nav-transitioning {
     transform: translateY(-100vh);
   }
@@ -99,7 +96,7 @@ html {
     right: 5%;
     font-size: 30px;
     padding: 10px;
-    background-color: rgba(16, 16, 70, 0.425);
+    background-color: rgba(16, 16, 70, 42.5%);
   }
 
   #menu-close {
@@ -124,42 +121,7 @@ html {
     z-index: 10;
   }
 
-  .background {
-    background-image: linear-gradient(to bottom, rgba(0, .6,.6, .9), rgba(0,.2,.2,.5)), url("./techo1.jpg");
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
 
-        h1 {
-            color: $offwhite;
-            font-family: $font-title;
-            font-size: 2rem;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            margin-top: 30px;
-            text-transform: uppercase;
-        }
-        h2 {
-          padding-bottom: 100px;
-          color: $offwhite;
-            font-family: $font-title;
-            font-size: 1.7rem;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            margin-top: 30px;
-        }
-        p {
-            color: $offwhite;
-            font-family: $font-title;
-            font-size: 1.2rem;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            margin-top: 100px;
-        }
-      }
 
   .flex-container {
     display: flex;
@@ -178,21 +140,68 @@ html {
     width: 10%;
   }
 
+  .content-services {
+    text-align: center;
+  }
+
+  h3 {
+    color: $gris;
+    font-family: $font-title;
+  }
+
+  p {
+    font-size: 1.5em;
+    color: $text;
+    font-family: $font-title;
+  }
+
+  h4 {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: $text;
+    font-family: $font-title;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 3px; 
+      background-color: $text;
+      margin: 5px auto 0 auto;
+    }
+  }
+
+  .section-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h5 {
+      font-size: 2.2em;
+      margin: 10px;
+      font-family: $font-title;
+      color: $text;
+    }
+
+    p {
+      text-align: center;
+      font-family: $font-text;
+      color: $text;
+    }
+  }
+
+  .section-flex img {
+    width: 350px;
+    border-radius: 15px;
+  }
+
+
+
   /* Start of media queries */
 @media only screen and (width >= 1024px) {
-  h1 {
-    padding: 35px 0;
-  }
-  h1 {
-    font-family: 'Arial', sans-serif;
-    text-align: center;
-    font-size: 50px;
-    border-bottom: 5px solid #E7DD11;
-    width: 800px;
-    margin: auto;
-    padding-bottom: 40px;
-    margin-bottom: 10px;
-  }
 
   nav, .backdrop-transitioning {
     justify-content: flex-end;
@@ -203,7 +212,7 @@ html {
   }
 
   header {
-    display: none;
+    display: "none";
   }
 
   .navlinks{
