@@ -1,9 +1,10 @@
 * {
     padding: 0;
-    margin: 0;
+    // margin: 0;
     box-sizing: border-box;
   }
   
-  li, ol {
+  li, ol, a {
     list-style: none;
+    text-decoration: none;
   }
