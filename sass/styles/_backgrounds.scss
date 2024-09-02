@@ -25,7 +25,7 @@
 }
 
 .background {
-    background-image: linear-gradient(to bottom, rgba(0, .6,.6, 90%), rgba(0,.2,.2,50%)), url("./techo1.jpg");
+    background-image: linear-gradient(to bottom, rgba(0, .6,.6, 90%), rgba(0,.2,.2,50%)), url("/techo1.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -64,7 +64,7 @@
       }
 
       .background-resi {
-        background-image: url("./panel1.png");
+        background-image: url("/panel1.png");
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
