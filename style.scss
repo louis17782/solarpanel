@@ -215,31 +215,31 @@ html {
     }
   }
 
-  .section-download {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 40px;
-    p {
-      color: $text;
-      font-family: $font-title;
-      font-size: 1.9em;
-    }
-    a {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid $offwhite;
-  border-radius: 5px;
-  background-color: $bluedark; 
-  color: $whitepure;
-  cursor: pointer;
-    }
-    a:hover {
-      background-color: $text;
-    }
- }
+//   .section-download {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     text-align: center;
+//     padding: 40px;
+//     p {
+//       color: $text;
+//       font-family: $font-title;
+//       font-size: 1.9em;
+//     }
+//     a {
+//   width: 100%;
+//   padding: 10px;
+//   border: 1px solid $offwhite;
+//   border-radius: 5px;
+//   background-color: $bluedark; 
+//   color: $whitepure;
+//   cursor: pointer;
+//     }
+//     a:hover {
+//       background-color: $text;
+//     }
+//  }
 
   /* Start of media queries */
 @media only screen and (width >= 1024px) {
