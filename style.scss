@@ -168,16 +168,18 @@ html {
       display: block;
       width: 50px;
       height: 3px; 
-      background-color: $text;
+      background-color: $bluedark;
       margin: 5px auto 0 auto;
     }
   }
 
-  .section-flex {
+  .flexbox {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    margin: 100px;
 
     h5 {
       font-size: 2.2em;
@@ -198,7 +200,7 @@ html {
     border-radius: 15px;
   }
 
-  .content-residencia, .content-agricultura {
+  .content-residencia {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -209,12 +211,22 @@ html {
       font-size: 2.2em;
       margin: 20px;
       font-family: $font-title;
+      &::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 3px; 
+        background-color: $bluedark;
+        margin: 5px auto 0 auto;
+      }
     }
+
     P {
       color: $text;
       font-family: $font-text;
       font-size: 1.5em;
     }
+   
   }
 
   .section-download {
@@ -280,34 +292,40 @@ html {
 
   nav, .backdrop-transitioning {
     justify-content: flex-end;
-    background-color: white;
     backdrop-filter: none;
     width: 100%;
-    height: 150px;
+    height: 10px;
   }
 
   header {
-    display: "none";
+    display: none;
   }
+
+  .background {
+        padding-top: 300px;
+      }
 
   .navlinks{
     justify-content: space-evenly;
     flex-direction: row;
-    letter-spacing: 2px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     height: 100%;
+    margin-right: 7%;
+   a{
+    color: $offwhite;
+   }
   }
 
   .nav, li {
-    margin-right: 70px;
+    margin-right: 50px;
   }
-
+  
   .nav-transitioning {
     transform: none;
   }
 
   .hidden {
-    position: static;
+    position: absolute;
     display: flex;
   }
 
@@ -317,19 +335,112 @@ html {
 
   .navlinks-container {
     justify-content: flex-end;
-    background-color: transparent;
+    background: none;
+    .fa-solid {
+      display: none;
+    }
   }
-
-  .logo {
-    height: 10px;
-    aspect-ratio: 1;
-    margin-left: 30px;
-    display: flex;
-  }
-
+  
   .nav-logo {
+    display: block;
     margin-top: 0;
     margin-right: auto;
+  }
+
+  .nav-logo img {
+    display: block;
+    width: 10%;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    p, h1, h2 {
+      margin: 5px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .content-services {
+    margin: 90px;
+    p {
+      margin-left: 150px;
+      margin-right: 150px;
+    }
+  }
+  
+  .flexbox {
+    padding: 20px;
+  
+    .section-flex {
+      display: flex;
+      flex-direction: row; 
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;  
+    }
+  
+    .section-flex > div {
+      display: flex;
+      flex-direction: column; 
+      align-items: center; 
+      text-align: center; 
+      width: 100%; 
+    }
+  
+    img {
+      max-width: 80%;  
+      height: auto;
+      margin-bottom: 10px; 
+    }
+  
+    h5 {
+      margin: 10px 0 5px 0;
+      font-size: 1.5em;
+    }
+  
+    p {
+      margin: 0;
+      padding: 0 10px;
+      font-size: 1em;
+    }
+  }
+  
+  .background-resi {
+    padding: 20px;
+
+    .content-residencia {
+      display: flex;
+      flex-direction: row; 
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px; 
+      padding: 50px
+    }
+    .content-residencia > div {
+      display: flex;
+      flex-direction: column; 
+      align-items: center; 
+      text-align: center; 
+      width: 100%; 
+    }
+    p {
+      text-align: left;
+    }
+  }
+
+  .section-download {
+    display: flex;
+    flex-direction: row;
+    margin: 40px;
+    p {
+      text-align: left;
+      font-size: 1.8em;
+      margin-right: 10px;
+    }
+    a {
+      width: 200px;
+    }
   }
 
   /*
