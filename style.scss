@@ -1,6 +1,7 @@
 @use "./sass/abstracts/" as *;
 @use "./sass/styles/resets.scss" as *;
-@use "./sass/styles/backgrounds" as*;
+@use "./sass/styles/backgrounds" as *;
+@use "./sass/layout/footer.scss" as *;
 
 html {
     scroll-behavior: smooth;
@@ -55,6 +56,7 @@ html {
     justify-content: space-evenly;
     align-items: center;
     height: 75%;
+    margin-top: 60px;
   }
 
   .yellow {
@@ -239,6 +241,38 @@ html {
     a:hover {
       background-color: $text;
     }
+ }
+
+ .content-grid {
+  background-color: $text;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  font-size: 1.2em;
+  word-spacing: 0.15em;
+  line-height: 1.5em;
+  font-family: $font-text;
+  p, a {
+    color: $offwhite;
+  }
+  .name {
+    font-size: 2.5em;
+    font-weight: $bold;
+  }
+  .contact-title {
+    font-size: 1.5em;
+    font-weight: $bold;
+    font-family: $font-title;
+  }
+ }
+
+ .content-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
  }
 
   /* Start of media queries */
