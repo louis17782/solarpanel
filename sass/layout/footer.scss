@@ -1,13 +1,15 @@
-  
-  .contact-link > a {
-    font-size: 30px;
-    color: $blackdark;
-    margin-left: 70px;
-    margin-top: 15px;
+@use "/sass/abstracts/" as*;
+ footer {
+  padding: 10px;
+  background-color: $bluedark;
+  text-align: center;
+  p {
+    color: $whitepure;
   }
+ }
 
-  @media only screen and (width >= 1024px) {
-    .contact-link {
-      margin-left: 280px;
-  }
-}
+//   @media only screen and (width >= 1024px) {
+//     .contact-link {
+//       margin-left: 280px;
+//   }
+// }
