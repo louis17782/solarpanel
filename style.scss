@@ -290,6 +290,37 @@ html {
   align-items: center;
   gap: 20px;
  }
+//pages suministros
+.content-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-box {
+  display: flex;
+  margin-left: 20px; 
+  max-width: 300px;
+  padding-top: 150px;
+
+  h1, p {
+   
+    text-align: left; 
+    margin: 0;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.content {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 40px;
+}
 
   /* Start of media queries */
 @media only screen and (width >= 1024px) {
