@@ -443,6 +443,20 @@ html {
     }
   }
 
+  .content-grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    p, a {
+      font-size: 0.90em;
+      margin: 3px;
+    }
+    .contact-title {
+      font-size: 1em;
+    }
+    li {
+      margin: 0%;
+    } 
+  }
   /*
   .whatsapp-btn {
     position: fixed;
