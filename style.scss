@@ -303,7 +303,8 @@ html {
   padding-top: 150px;
 
   h1, p {
-   
+    color: $offwhite;
+    font-family: $font-title;
     text-align: left; 
     margin: 0;
   }
@@ -321,6 +322,202 @@ html {
   background-color: rgba(255, 255, 255, 0.5);
   padding: 40px;
 }
+
+.content-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: $whitegrey;
+  h2, p {
+    color: $text;
+    font-family: $font-text;
+    font-size: 1.5em;
+  }
+  
+  h2 {
+    font-size: 2em;
+  }
+
+  img {
+    width: 250px;
+    margin: 20px;
+  }
+}
+
+.section {
+  padding: 20px;
+  background-color: $whitepure;
+
+  h3 {
+    color: $text;
+    font-family: $font-title;
+    font-size: 2.5em;
+    text-align: center; 
+    margin-bottom: 30px; 
+  }
+
+  .flex-row {
+    display: flex;
+    gap: 20px; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    a {
+      color: $whitepure;
+      background-color: $bluedark;
+      padding: 10px;
+    }
+  }
+
+  .content-card {
+    flex-direction: column;
+    background-color: $whitepure; 
+    border: 1px solid #ddd; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+    max-width: 300px; 
+    text-align: center;
+
+    h4 {
+      margin-bottom: 15px; 
+      font-size: 1.5em; 
+      color: $text;
+      font-family: $font-title;
+    }
+
+    p {
+      font-size: 1em; 
+      color: $text;
+      font-family: $font-text;
+      text-align: left; 
+    }
+  }
+}
+
+.content-card i {
+  display: flex;
+  flex-direction: column;
+  font-size: 2em;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-buttom {
+  text-align: center;
+  margin: 30px;
+  a {
+    background-color: $bluedark;
+    font-family: $font-title;
+    font-size: 1.5em;
+    color: $offwhite;
+    padding: 5px;
+  }
+}
+
+// carousel
+h5 {
+  text-align: center;
+  font-size: 2.5em;
+  color: $text;
+  font-family: $font-title;
+  margin: 0;
+  margin-top: 50px;
+  background-color: $offwhite;
+}
+
+.categories {
+  position: relative;
+
+  button {
+    border: none;
+    background-color: transparent;
+  }
+}
+
+.carousel {
+  overflow-x: hidden; //new
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.arrow-left, .arrow-right {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-size: 25px;
+  height: 100%;
+  z-index: 99;
+  cursor: pointer;
+}
+
+.arrow-left {
+  left: 2%;
+  color: $bluedark;
+}
+
+.arrow-right {
+  right: 2%;
+  color: $bluedark;
+}
+
+.carousel-frame {
+  display: flex;
+  width: 600%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-element {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: calc(100% / 6);
+  min-height: 500px;
+  padding: 0px 2%;
+  scroll-snap-align: start;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carr-pos-1 .carousel-element:nth-child(1),
+.carr-pos-2 .carousel-element:nth-child(2),
+.carr-pos-3 .carousel-element:nth-child(3),
+.carr-pos-4 .carousel-element:nth-child(4),
+.carr-pos-5 .carousel-element:nth-child(5),
+.carr-pos-6 .carousel-element:nth-child(6) {
+  opacity: 2; 
+}
+
+.carousel-element img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+.carr-pos-1 {
+  transform: translateX(0);
+}
+
+.carr-pos-2 {
+  transform: translateX(calc(-100% / 6));
+}
+.carr-pos-3 {
+  transform: translateX(calc(-100% * 2 / 6));
+}
+.carr-pos-4 {
+  transform: translateX(calc(-100% * 3 / 6));
+}
+.carr-pos-5 {
+  transform: translateX(calc(-100% * 4 / 6));
+}
+.carr-pos-6 {
+  transform: translateX(calc(-100% * 5 / 6));
+}
+
 
   /* Start of media queries */
 @media only screen and (width >= 1024px) {
