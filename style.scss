@@ -256,7 +256,11 @@ html {
  }
 
  .content-grid {
-  background-color: $text;
+  background: linear-gradient(
+    to bottom, 
+    rgba(134, 143, 160, 0.8),
+    #20222b
+  );
   justify-content: center;
   align-items: center;
   text-align: center;
