@@ -1,7 +1,7 @@
 @use "/sass/abstracts/" as *;
 
 .content-background {
-    background-image: linear-gradient(to bottom, rgba(0, .6,.6, 99%), rgba(0,.2,.2,30%)), url("/Agricultura.jpg");
+    background-image: linear-gradient(to bottom, rgba(0, .6,.6, 99%), rgba(0,.2,.2,30%)), url("/Agricultura.webp");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -25,7 +25,7 @@
 }
 
 .background {
-    background-image: linear-gradient(to bottom, rgba(0, .6,.6, 90%), rgba(0,.2,.2,50%)), url("/techo1.jpg");
+    background-image: linear-gradient(to bottom, rgba(0, .6,.6, 20%), rgba(0,.2,.2,90%)), url("/techo1.webp");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -81,7 +81,7 @@
       }
 
       .pages {
-        background-image: linear-gradient(to bottom, rgba(0, .6,.6, 90%), rgba(0,.2,.2,50%)), url("/build1.jpg");
+        background-image: linear-gradient(to bottom, rgba(0, .6,.6, 90%), rgba(0,.2,.2,50%)), url("/build1.webp");
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
