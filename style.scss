@@ -59,13 +59,9 @@ html {
     margin-top: 60px;
   }
 
-  .yellow {
+  .borderbot {
     color: $text;
-  }
-
-  .fullyellow {
-    color: $text;
-    border: 2px solid $text;
+    border: 2px solid $whitepure;
     padding: 2px 5px;
   }
 
@@ -256,11 +252,7 @@ html {
  }
 
  .content-grid {
-  background: linear-gradient(
-    to bottom, 
-    rgba(134, 143, 160, 0.8),
-    #20222b
-  );
+  background-image: linear-gradient(to top, rgba(0, .6,.6, 70%), rgba(0,.2,.2,7%)), url("/footer.jpg");
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -290,7 +282,7 @@ html {
   align-items: center;
   gap: 20px;
  }
-//pages suministros
+// start pages suministros
 .content-box {
   display: flex;
   flex-direction: column;
@@ -319,7 +311,7 @@ html {
 }
 
 .content {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(105, 103, 103, 0.5);
   padding: 40px;
 }
 
@@ -330,6 +322,7 @@ html {
   align-items: center;
   text-align: center;
   background-color: $whitegrey;
+  padding: 20px;
   h2, p {
     color: $text;
     font-family: $font-text;
@@ -343,6 +336,21 @@ html {
   img {
     width: 250px;
     margin: 20px;
+  }
+
+  a {
+    text-align: left;
+    margin: 0px;
+    background-color: $bluedark;
+    border: solid 2px $bluesolf;
+    font-family: $font-title;
+    font-size: 1.5em;
+    color: $offwhite;
+    padding: 5px;
+    cursor: pointer;
+  }
+  a:hover {
+    background-color: $bluesolf;
   }
 }
 
@@ -409,10 +417,15 @@ html {
   margin: 30px;
   a {
     background-color: $bluedark;
+    border: solid 2px $bluesolf;
     font-family: $font-title;
     font-size: 1.5em;
     color: $offwhite;
     padding: 5px;
+  }
+  
+  a:hover {
+    background-color: $bluesolf;
   }
 }
 
@@ -437,9 +450,9 @@ h5 {
 }
 
 .carousel {
-  overflow-x: hidden; //new
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
+  overflow: hidden;
 }
 
 .arrow-left, .arrow-right {
@@ -498,6 +511,7 @@ h5 {
   width: 100%;
   margin: 0 auto;
 }
+
 .carr-pos-1 {
   transform: translateX(0);
 }
@@ -518,6 +532,7 @@ h5 {
   transform: translateX(calc(-100% * 5 / 6));
 }
 
+//end pages suministros 
 
   /* Start of media queries */
 @media only screen and (width >= 1024px) {
@@ -689,6 +704,52 @@ h5 {
       margin: 0%;
     } 
   }
+
+  // start pages suministros
+
+  .content-box {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content-box {
+    display: flex;
+    margin-left: 130px; 
+    max-width: 500px;
+    padding-top: 0%;
+  
+  }
+  
+  .content {
+    background-color: rgba(105, 103, 103, 0.5);
+    padding: 40px;
+  }
+
+  .content-row {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+
+    div {
+      padding: 100px;
+    }
+    
+    h2 {
+      font-size: 3em;
+    }
+  
+    img {
+      width: 350px;
+      margin-left: 120px;
+    }
+  }
+  
+  .carousel-element img {
+    width: 50%;
+    height: 70%;
+    margin: 0 auto;
+  }
+
   /*
   .whatsapp-btn {
     position: fixed;
