@@ -8,7 +8,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         suministros: resolve(__dirname, 'pages/suministros.html'),  
-        // Añade más entradas si tienes otras páginas
+        contact: resolve(__dirname, 'pages/contact.html'),
       },
     },
   },
