@@ -195,7 +195,20 @@ html {
     width: 350px;
     border-radius: 15px;
   }
+// effect zoom
+  #zoom-section {
+    img {
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
 
+     img:hover {
+          transform: scale(1.1);
+        }
+  }
+
+  //end effect zoom
+  
   .content-residencia {
     display: flex;
     flex-direction: column;
@@ -353,6 +366,18 @@ html {
     background-color: $bluesolf;
   }
 }
+// animation section 
+#services {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.6s ease-out, transform 0.9s ease-out;
+
+  &.animate {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+// animation end
 
 .section {
   padding: 20px;
@@ -377,16 +402,17 @@ html {
       padding: 10px;
     }
   }
+}
 
-  .content-card {
-    flex-direction: column;
-    background-color: $whitepure; 
-    border: 1px solid #ddd; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    padding: 20px; 
-    max-width: 300px; 
-    text-align: center;
+.content-card {
+  flex-direction: column;
+  background-color: $whitepure; 
+  border: 1px solid #ddd; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  padding: 20px; 
+  max-width: 300px; 
+  text-align: center;
 
     h4 {
       margin-bottom: 15px; 
@@ -402,7 +428,7 @@ html {
       text-align: left; 
     }
   }
-}
+
 
 .content-card i {
   display: flex;
