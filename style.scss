@@ -663,6 +663,34 @@ textarea {
   }
 }
 
+ .whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 80%;
+    animation: burst 1s ease-out;
+    animation-fill-mode: forwards;
+  }
+  
+  .whatsapp-btn img {
+    width: 100px;
+    height: 50px;
+  }
+
+  @keyframes burst {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
  /* Start of media queries */
 
 // // Ajustes para pantallas más grandes (tablet)
@@ -672,6 +700,10 @@ textarea {
       width: 90%;
       min-height: 450px; 
     }
+  }
+
+  .whatsapp-btn {
+    left: 90%;
   }
 }
 
@@ -906,22 +938,10 @@ textarea {
       margin-top: 40px;
     }
   }
+
+  .whatsapp-btn {
+    bottom: 40px;
+    left: 94%;
+  }
  }
-  
-
-
- 
-  // .whatsapp-btn {
-  //   position: fixed;
-  //   bottom: 20px;
-  //   right: 20px;
-  // }
-  
-  // .whatsapp-btn {
-  //   width: 60px;
-  //   height: 150px;
-  //   border-radius: 50%;
-  //   font-size: 70px;
-  // }
-  
  
