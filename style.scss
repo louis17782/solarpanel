@@ -867,8 +867,13 @@ textarea {
 
   .contenedor1 {
     flex-direction: row;
+    gap: 120px;
+  }
+  .formulario {
+    margin-left: 50px;
   }
   .form1 {
+    width: 50%;
     margin: 50px;
     h6 {
       margin-top: 40px;
