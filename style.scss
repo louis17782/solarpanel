@@ -533,8 +533,8 @@ h5 {
 }
 
 //end pages suministros 
-//section contact 
 
+//section contact 
 .contenedor1 {
   background: linear-gradient(to bottom, rgba(0, 0, .3, .6), rgba(0, 0, 0, 0)), url("/glass1.jpg");
   background-repeat: no-repeat;
@@ -542,10 +542,23 @@ h5 {
   background-size: cover;
   padding: 50px;
 }
+.contenedor1 {
+  display: flex;
+  flex-direction: column;
+}
+
 
 .content-form {
   margin-top: 100px;
+
+  h6 {
+    text-align: center;
+    color: $offwhite;
+    margin: 0%;
+    font-size: 2em;
+  }
 }
+
 
 .formulario {
   width: 350px;
@@ -600,21 +613,40 @@ textarea {
   background-color: $offwhite;
 }
 
-iframe {
-  float: none;
+.form1 {
   width: 100%;
-  height: 400px;
-  padding: 20px;
+  padding: 15px;
+  
+  h6 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 2rem;
+    color: $offwhite;
+  }
+  
+  .mapa {
+    width: 105%;
+    iframe {
+      width: 100%;
+      height: auto;
+      min-height: 300px;
+      border: 0;
+    }
+  }
 }
 
-h6 {
-  color: $offwhite;
-  font-size: 2em;
-  text-align: center;
-  margin: 20px;
+ /* Start of media queries */
+
+// // Ajustes para pantallas más grandes (tablet)
+@media (min-width: 769px) and (max-width: 1024px) {
+  .form1 {
+    .mapa iframe {
+      width: 90%;
+      min-height: 450px; 
+    }
+  }
 }
 
-  /* Start of media queries */
 @media only screen and (width >= 1024px) {
 
   nav, .backdrop-transitioning {
@@ -830,38 +862,32 @@ h6 {
   }
 
   // contact 
-  .contenedor1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 20px;
-    gap: 50px;
-    }
-  }
-  .content-form, .form1 {
-      width: 45%; 
-      h6 {
-        text-align: center;
-        font-size: 1.5em;
-        margin-bottom: 20px;
-      }
-}
 
-.form1 {
-  margin-top: 110px;
+  .contenedor1 {
+    flex-direction: row;
+  }
+  .form1 {
+    margin: 50px;
+  }
+  h6 {
+    margin-top: 40px;
+  }
  }
-  /*
-  .whatsapp-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-  }
-  .whatsapp-btn {
-    width: 60px;
-    height: 150px;
-    border-radius: 50%;
-    font-size: 70px;
-  }
-  */
+  
+
+
+ 
+  // .whatsapp-btn {
+  //   position: fixed;
+  //   bottom: 20px;
+  //   right: 20px;
+  // }
+  
+  // .whatsapp-btn {
+  //   width: 60px;
+  //   height: 150px;
+  //   border-radius: 50%;
+  //   font-size: 70px;
+  // }
+  
  
