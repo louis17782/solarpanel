@@ -83,3 +83,47 @@ function moveCarouselLeft() {
 };
 document.getElementById('moveleft').addEventListener('click', moveCarouselLeft);
 document.getElementById('moveright').addEventListener('click', moveCarouselRight);
+
+// zoom section
+
+const zoomSection = document.getElementById('zoom-section');
+
+if (zoomSection) {
+  zoomSection.addEventListener('mouseover', (event) => {
+    const img = event.target.closest('img');
+    if (img) {
+      img.style.transition = 'transform 0.3s ease';
+      img.style.transform = 'scale(1.1)'; 
+    }
+  });
+
+  zoomSection.addEventListener('mouseout', (event) => {
+    const img = event.target.closest('img');
+    if (img) {
+      img.style.transform = 'scale(1)'; 
+    }
+  });
+}
+
+// suministro sections
+
+document.addEventListener('DOMContentLoaded', () => {
+  const section = document.getElementById('services');
+  
+  function handleScroll() {
+      const sectionTop = section.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      if (sectionTop < windowHeight) {
+          section.classList.add('animate');
+      }
+  }
+
+  window.addEventListener('scroll', handleScroll);
+  handleScroll(); 
+});
+
+
+
+
+
