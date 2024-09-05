@@ -138,6 +138,7 @@ html {
 
   .content-services {
     text-align: center;
+    margin: 30px;
   }
 
   h3 {
@@ -146,6 +147,7 @@ html {
   }
 
   p {
+    text-align: left;
     font-size: 1.5em;
     color: $text;
     font-family: $font-title;
