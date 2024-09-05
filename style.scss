@@ -564,8 +564,8 @@ h5 {
   width: 350px;
   margin: 0 auto;
   padding: 30px;
-  border: 4px solid $bluestrong;
-  background-color: #fff; 
+  border: 1px solid $bluestrong;
+  background-color: rgba(49, 49, 49, 0.5);
 }
 
 .campo {
@@ -573,7 +573,7 @@ h5 {
 }
 
 label {
-  color: #222;
+  color: $whitepure;
   font-family: 'Arial', sans-serif;
 }
 
@@ -587,7 +587,6 @@ label {
   padding: 8px;
   border-radius: 5px;
   background-color: transparent; 
-  color: #333;
 }
 
 textarea {
@@ -596,7 +595,10 @@ textarea {
   padding: 8px;
   border-radius: 5px;
   background-color: transparent; 
-  color: #333;
+  color: red;
+}
+::placeholder {
+  color: rgb(243, 234, 234);
 }
 
 .send[type="submit"] {
@@ -610,7 +612,7 @@ textarea {
 }
 
 .send[type="submit"]:hover {
-  background-color: $offwhite;
+  background-color: $bluesolf;
 }
 
 .form1 {
@@ -868,9 +870,9 @@ textarea {
   }
   .form1 {
     margin: 50px;
-  }
-  h6 {
-    margin-top: 40px;
+    h6 {
+      margin-top: 40px;
+    }
   }
  }
   
