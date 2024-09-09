@@ -625,8 +625,7 @@ textarea {
   height: 150px;
   padding: 8px;
   border-radius: 5px;
-  background-color: transparent; 
-  color: red;
+  background-color: transparent;
 }
 
 ::placeholder {
@@ -636,9 +635,9 @@ textarea {
 .send[type="submit"] {
   width: 100%;
   padding: 10px;
-  border: 2px solid $bluestrong;
-  border-radius: 5px;
-  background-color: $bluedark; 
+  border: 2px solid $whitepure;
+  border-radius: 10px;
+  background-color: transparent; 
   color: $whitepure;
   cursor: pointer;
 }
