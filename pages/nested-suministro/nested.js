@@ -121,7 +121,3 @@ if (zoom) {
     }
   });
 }
-
-//carouselslider
-
-
