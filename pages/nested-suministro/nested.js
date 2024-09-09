@@ -101,3 +101,26 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', handleScroll);
     handleScroll(); 
   });
+
+  // zoomsection
+
+  const zoom = document.getElementById('zoomcard');
+
+if (zoom) {
+  zoom.addEventListener('mouseover', (event) => {
+    const content = event.target.closest('.content-card');
+    if (content) {
+      content.style.transition = 'transform 0.5s ease';
+      content.style.transform = 'scale(1.1)';
+      content.style.cursor = 'pointer'; 
+    }
+  });
+
+  zoom.addEventListener('mouseout', (event) => {
+    const content = event.target.closest('.content-card');
+    if (content) {
+      content.style.transform = 'scale(1)'; 
+    }
+  });
+}
+
