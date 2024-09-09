@@ -196,19 +196,6 @@ html {
     width: 350px;
     border-radius: 15px;
   }
-// effect zoom
-  #zoom-section {
-    img {
-      transition: transform 0.3s ease;
-      cursor: pointer;
-    }
-
-     img:hover {
-          transform: scale(1.1);
-        }
-  }
-
-  //end effect zoom
   
   .content-residencia {
     display: flex;
