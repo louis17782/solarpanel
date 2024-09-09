@@ -30,8 +30,6 @@ document.getElementById('menu-toggle').addEventListener('click', showMenu);
 document.getElementById('menu-close').addEventListener('click', hideMenu);
 
 //carousel
-let dots = document.querySelectorAll(' .dot');
-var counter = 0;
 
 function moveCarouselRight() {
     const carousel = document.getElementById('carousel');
@@ -102,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     handleScroll(); 
   });
 
-  // zoomsection
+  // zoomSection
 
   const zoom = document.getElementById('zoomcard');
 
@@ -123,4 +121,7 @@ if (zoom) {
     }
   });
 }
+
+//carouselslider
+
 
