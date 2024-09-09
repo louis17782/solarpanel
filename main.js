@@ -38,8 +38,9 @@ if (zoomSection) {
   zoomSection.addEventListener('mouseover', (event) => {
     const img = event.target.closest('img');
     if (img) {
-      img.style.transition = 'transform 0.3s ease';
+      img.style.transition = 'transform 0.5s ease';
       img.style.transform = 'scale(1.1)'; 
+      img.style.cursor = 'pointer'
     }
   });
 
