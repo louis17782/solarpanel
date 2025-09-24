@@ -41,10 +41,10 @@
         <div class="content-form">
           <h6>Contáctanos</h6>
         <div class="formulario">
-          <form action="/submit-contacto" method="post">
+          <form id="contact-form">
               <div class="campo">
                 <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+                <input type="text" id="name" name="nombre" placeholder="Escribe tu nombre" required>
               </div>
               <div class="campo">
                 <label for="email">Email:</label>
@@ -52,11 +52,11 @@
               </div>
               <div class="campo">
                 <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="Escribe tu número de teléfono" required>
+                <input type="tel" id="phone" name="telefono" placeholder="Escribe tu número de teléfono" required>
               </div>
                 <div class="campo">
                   <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje"></textarea>
+                <textarea id="message" name="mensaje" placeholder="Escribe tu mensaje"></textarea>
               </div>
               <button class="send" type="submit">Enviar</button>
             </form>
@@ -118,5 +118,6 @@
         </footer>
      </main>
      <script type="module" src="/pages/nested-contacto/nested.js"></script>
+      <script type="module" src="/pages/nested-contacto/feedBackForm.js"></script>
 </body>
 </html>
