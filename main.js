@@ -51,3 +51,23 @@ if (zoomSection) {
     }
   });
 }
+
+const zoomSection2 = document.getElementById('zoom-section2');
+
+if (zoomSection2) {
+  zoomSection2.addEventListener('mouseover', (event) => {
+    const img = event.target.closest('img');
+    if (img) {
+      img.style.transition = 'transform 0.5s ease';
+      img.style.transform = 'scale(1.1)'; 
+      img.style.cursor = 'pointer'
+    }
+  });
+
+  zoomSection2.addEventListener('mouseout', (event) => {
+    const img = event.target.closest('img');
+    if (img) {
+      img.style.transform = 'scale(1)'; 
+    }
+  });
+}
